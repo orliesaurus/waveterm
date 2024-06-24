@@ -22,7 +22,8 @@ jobs:
             - uses: dashcamio/testdriver@main
               id: testdriver
               with:
-                version: v2.12.12
+                version: v3.4.0
+                key: ${{secrets.DASHCAM_API_KEY}}
                 prerun: |
                       rm ~/Desktop/WITH-LOVE-FROM-AMERICA.txt
                       cd ~/actions-runner/_work/testdriver/testdriver/
@@ -52,7 +53,7 @@ jobs:
                       1. press return
                       1. validate Wave shows the result of 'ls'
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
             - uses: peter-evans/create-or-update-comment@v4
               if: ${{always()}}
               with:
