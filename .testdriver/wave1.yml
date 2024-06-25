@@ -2,27 +2,26 @@ steps:
   - step:
       - command: focus-application
         name: Electron
-      - command: click-text
-        text: Get Started   
-        anchor: I accept
-      - command: click-text
-        text: Settings
-      - command: click-text
-        text: 13px
-      - command: click-text
-        text: 12px
-      - command: click-text
-        text: Dark
-      - command: click-text
-        text: Light
-      - command: click-text
-        text: workspace-1
-      - command: press-keys
-        keys:
-          - command
-          - i
-      - command: type
-        string: ls
-      - command: press-keys
-        keys:
-          - enter
+      - command: hover-text
+        description: Get Started
+        action: click
+      - command: hover-text
+        description: Settings
+        action: click
+      - command: hover-text
+        description: 13px
+        action: click
+      - command: hover-text
+        description: 12px
+        action: click
+      - command: hover-text
+        description: Dark
+        action: click
+      - command: hover-text
+        description: Light
+        action: click
+      - command: hover-text
+        description: workspace-1
+        action: click
+      - command: assert
+        description: the terminal is white

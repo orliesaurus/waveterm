@@ -22,7 +22,7 @@ jobs:
             - uses: dashcamio/testdriver@main
               id: testdriver
               with:
-                version: v3.4.0
+                version: v3.5.6
                 key: ${{secrets.DASHCAM_API_KEY}}
                 prerun: |
                       rm ~/Desktop/WITH-LOVE-FROM-AMERICA.txt
